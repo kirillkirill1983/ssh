@@ -1,0 +1,21 @@
+Сначала вы должны создать .ssh и файл authorized_keys .
+
+Создайте .ssh :
+
+ mkdir ~/.ssh 
+Установите правильные разрешения:
+
+ chmod 700 ~/.ssh 
+Создайте файл authorized_keys :
+
+ touch ~/.ssh/authorized_keys 
+Установите правильные разрешения:
+
+ chmod 600 ~/.ssh/authorized_keys 
+Разрешения важны! Он не будет работать без правильных разрешений!
+
+Теперь вы можете добавить открытый ключ в файл authorized_keys :
+
+ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys 
+
+ nano /etc/ssh/sshd_config
